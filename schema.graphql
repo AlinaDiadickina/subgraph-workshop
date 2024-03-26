@@ -1,0 +1,20 @@
+type Upgraded @entity(immutable: true) {
+  id: Bytes!
+  implementation: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Level @entity {
+  id: ID!
+  level: Int!
+  isGenesis: Boolean!
+  price: BigInt!
+  vestingRewardWOWTokens: BigInt!
+  lifecycleDuration: BigInt!
+  extensionDuration: BigInt!
+  allocationPerProject: BigInt!
+  supplyCap: BigInt!
+  baseURI: String!
+}
